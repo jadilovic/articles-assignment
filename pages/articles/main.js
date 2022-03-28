@@ -48,6 +48,20 @@ const Main = () => {
 		}
 	};
 
+	const handleSearch = (event) => {
+		let value = event.target.value.toLowerCase();
+		let result = [];
+		result = articles.filter((article) => {
+			return article.title.search(value) !== -1;
+		});
+		setArticles(result);
+	};
+
+	const handleClear = () => {
+		document.getElementById('search').value = '';
+		setArticles([...data]);
+	};
+
 	return (
 		<div className="container">
 			<nav>
@@ -73,8 +87,13 @@ const Main = () => {
 			<h4>{`Total number of articles: ${articles.length}`}</h4>
 
 			<label>Search:</label>
-			<input type="text" id="fname" name="fname" />
-
+			<input
+				onChange={(event) => handleSearch(event)}
+				type="text"
+				id="search"
+				name="search"
+			/>
+			<button onClick={() => handleClear()}>Clear</button>
 			{articles.map((article, index) => {
 				return <li key={index}>{article.title}</li>;
 			})}

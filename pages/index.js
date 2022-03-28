@@ -17,14 +17,9 @@ export default function Home() {
 					<Link href={'/articles/main'}>
 						<a className={styles.card}>
 							<h2>Articles page &rarr;</h2>
-							<p>Fetch data.</p>
+							<p>Go to articles main page to fetch data.</p>
 						</a>
 					</Link>
-
-					<a href="https://nextjs.org/learn" className={styles.card}>
-						<h2>Learn &rarr;</h2>
-						<p>Learn about Next.js in an interactive course with quizzes!</p>
-					</a>
 				</div>
 			</main>
 
