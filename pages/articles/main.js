@@ -49,7 +49,7 @@ const Main = () => {
 	};
 
 	const handleSearch = (event) => {
-		let value = event.target.value.toLowerCase();
+		let value = event.target.value;
 		let result = [];
 		result = articles.filter((article) => {
 			return article.title.search(value) !== -1;
@@ -60,6 +60,7 @@ const Main = () => {
 	const handleClear = () => {
 		document.getElementById('search').value = '';
 		setArticles([...data]);
+		setCategoryName('Show all');
 	};
 
 	return (
