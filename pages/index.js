@@ -21,6 +21,14 @@ export default function Home() {
 						</a>
 					</Link>
 				</div>
+				<div className={styles.grid}>
+					<Link href={'/react/testing'}>
+						<a className={styles.card}>
+							<h2>Testing &rarr;</h2>
+							<p>Go to page for React testing.</p>
+						</a>
+					</Link>
+				</div>
 			</main>
 
 			<footer className={styles.footer}>
